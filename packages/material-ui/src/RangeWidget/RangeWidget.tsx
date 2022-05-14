@@ -22,7 +22,7 @@ const RangeWidget = ({
   let sliderProps = { value, label, id, ...rangeSpec(schema) };
 
   const _onChange = (_: any, value?: number | number[])  => {
-     onChange(value ? options.emptyValue : value);
+     onChange(value ? value : options.emptyValue);
   }
   const _onBlur = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) => onBlur(id, value);
   const _onFocus = ({ target: { value } }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
